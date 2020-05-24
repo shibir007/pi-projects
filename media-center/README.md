@@ -26,7 +26,18 @@ sudo apt-get install kodi
 <img src="images/Kodi_upnp.png" width=800>
 You can add specific directories to Movies, Music, etc.
 
-#### Step 4: Access Kodi as client
+#### Step 4: Make sure to run Kodi at init
+```
+pi@rpi:~ $ cat /etc/xdg/lxsession/LXDE-pi/autostart
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@kodi
+@deluged
+@deluge-web
+```
+
+#### Step 5: Access Kodi as client
 - Install kodi on your TV/mobile device.
 - Enable uPnP as mentioned in step 3.
 - Add the kodi(rpi) library by browsing.
