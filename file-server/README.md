@@ -63,4 +63,6 @@ sudo systemctl restart smbd
 ```
 
 #### Step 6: Test from a client
-
+From any device on the local network, now you can access the files.
+Try smb://192.168.0.110 from a browser.
+<img src="images/step5_smb_login.png" width=400>
