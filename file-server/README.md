@@ -41,7 +41,7 @@ sudo apt-get install samba samba-common-bin
 
 #### Step 5: Configure Samba
 You need to edit "/etc/samba/smb.conf" file to define what and with whom you need to share.
-For me the user is "pi" and I am sharing my external storage mounted on /media/pi
+For me the user is "pi" and I am sharing my external storage mounted on /media/pi.
 
 ```
 [Media]
@@ -54,7 +54,7 @@ create mask = 0777
 directory mask = 0777
 ```
 
-Note: You can set public=yes, if you want anyone to access your files (no recomended).
+Note: You can set public=yes, if you want anyone to access your files (not recomended).
 I have only provided permission to user "pi".
 
 ```
@@ -63,4 +63,6 @@ sudo systemctl restart smbd
 ```
 
 #### Step 6: Test from a client
-
+From any device on the local network, now you can access the files.
+Try smb://192.168.0.110 from a browser.
+<img src="images/step5_smb_login.png" width=400>
