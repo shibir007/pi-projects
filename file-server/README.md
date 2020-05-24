@@ -41,7 +41,7 @@ sudo apt-get install samba samba-common-bin
 
 #### Step 5: Configure Samba
 You need to edit "/etc/samba/smb.conf" file to define what and with whom you need to share.
-For me the user is "pi" and I am sharing my external storage mounted on /media/pi
+For me the user is "pi" and I am sharing my external storage mounted on /media/pi.
 
 ```
 [Media]
@@ -54,7 +54,7 @@ create mask = 0777
 directory mask = 0777
 ```
 
-Note: You can set public=yes, if you want anyone to access your files (no recomended).
+Note: You can set public=yes, if you want anyone to access your files (not recomended).
 I have only provided permission to user "pi".
 
 ```
